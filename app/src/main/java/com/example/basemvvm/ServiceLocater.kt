@@ -4,6 +4,7 @@ object ServiceLocator {
 
     const val DB_NAME = "test_database"
 
+    private var accessToken: String = ""
     private var lang: String = ""
 
     fun getLanguage(): String{

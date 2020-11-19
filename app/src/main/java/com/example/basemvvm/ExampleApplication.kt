@@ -5,7 +5,7 @@ import android.content.Context
 import androidx.multidex.MultiDex
 import timber.log.Timber
 
-class TestApplication : Application(){
+class ExampleApplication : Application(){
 
     override fun onCreate() {
         super.onCreate()
