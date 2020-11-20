@@ -15,14 +15,14 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true //for Android prior 5.0 only
+        //multiDexEnabled true //for Android prior 5.0 only
     }
 
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
-            //multiDexEnabled true //basically you want to shrink only release version for easier to debug coding
+            multiDexEnabled true //basically you want to shrink only release version for easier to debug coding
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
         }

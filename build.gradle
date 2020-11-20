@@ -39,7 +39,7 @@ allprojects {
 
 ext {
     // Sdk and tools
-    minsdk_version = 17
+    minsdk_version = 23
     targetsdk_version = 30
     compilesdk_version = 30
 
