@@ -14,8 +14,7 @@ object ServiceLocator {
     const val DB_NAME = "example_database"
 
     private var database: ExampleDatabase? = null
-    private var accessToken: String = ""
-    private var lang: String = ""
+    private var lang: String = "en"
 
     @Volatile
     var languageRepository: LanguageRepository? = null
@@ -50,11 +49,7 @@ object ServiceLocator {
         return result
     }
 
-    fun getLanguage(): String{
-        return if(lang.isNullOrEmpty())
-            "en"
-        else lang
-    }
+    fun getLanguage() = lang
 
     fun setLanguage(_lang: String){
         lang = _lang
