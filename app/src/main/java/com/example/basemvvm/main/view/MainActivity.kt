@@ -23,11 +23,18 @@ class MainActivity : AppCompatActivity() {
             setSupportActionBar(toolbar)
 
             val navController: NavController = findNavController(R.id.navHostFragment)
-            appBarConfiguration = AppBarConfiguration.Builder(R.id.main_frag_dest, R.id.setting_frag_dest)
+            appBarConfiguration = AppBarConfiguration.Builder(R.id.main_frag_dest, R.id.security_frag_dest, R.id.setting_frag_dest)
                     .setOpenableLayout(drawerLayout)
                     .build()
             setupActionBarWithNavController(navController, appBarConfiguration)
             navView.setupWithNavController(navController)
+
+            //toolbar customize
+            supportActionBar?.setDisplayShowTitleEnabled(false)
+            supportActionBar?.setDisplayShowHomeEnabled(true)
+            navController.addOnDestinationChangedListener { _, destination, _ ->
+                textTitle.text = destination.label
+            }
         }
         setupNavigationDrawer()
     }

@@ -8,17 +8,34 @@
     <fragment
         android:id="@+id/main_frag_dest"
         android:name="com.example.basemvvm.main.view.MainFragment"
-        android:label="MainFragment" >
+        android:label="Home" >
         <action
             android:id="@+id/action_main_frag_dest_to_setting_frag_dest"
             app:destination="@id/setting_frag_dest" />
+        <action
+            android:id="@+id/action_main_frag_dest_to_security_frag_dest2"
+            app:destination="@id/security_frag_dest" />
     </fragment>
     <fragment
         android:id="@+id/setting_frag_dest"
         android:name="com.example.basemvvm.setting.view.SettingFragment"
-        android:label="SettingFragment" >
+        android:label="Setting" >
         <action
             android:id="@+id/action_setting_frag_dest_to_main_frag_dest"
             app:destination="@id/main_frag_dest" />
+        <action
+            android:id="@+id/action_setting_frag_dest_to_security_frag_dest2"
+            app:destination="@id/security_frag_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/security_frag_dest"
+        android:name="com.example.basemvvm.security.view.SecurityFragment"
+        android:label="Security" >
+        <action
+            android:id="@+id/action_security_frag_dest_to_main_frag_dest2"
+            app:destination="@id/main_frag_dest" />
+        <action
+            android:id="@+id/action_security_frag_dest_to_setting_frag_dest2"
+            app:destination="@id/setting_frag_dest" />
     </fragment>
 </navigation>
