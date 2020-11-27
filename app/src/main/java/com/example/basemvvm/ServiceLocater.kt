@@ -6,7 +6,7 @@ import androidx.room.Room
 import com.example.basemvvm.data.ExampleDatabase
 import com.example.basemvvm.data.source.LanguageDataSource
 import com.example.basemvvm.data.source.local.LanguageLocalDataSource
-import com.example.basemvvm.data.source.repository.DefaultLanguageRepository
+import com.example.basemvvm.data.source.repository.LanguageRepositoryImpl
 import com.example.basemvvm.data.source.repository.LanguageRepository
 
 object ServiceLocator {
@@ -28,7 +28,7 @@ object ServiceLocator {
 
     private fun createLanguageRepository(context: Context): LanguageRepository {
         val newRepo =
-            DefaultLanguageRepository(
+            LanguageRepositoryImpl(
                 createLanguageLocalDataSource(context)
             )
         languageRepository = newRepo

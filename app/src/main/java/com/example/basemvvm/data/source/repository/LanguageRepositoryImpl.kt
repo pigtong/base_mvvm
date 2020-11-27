@@ -8,7 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.withContext
 
-class DefaultLanguageRepository (
+class LanguageRepositoryImpl (
     private val languageDataSource: LanguageDataSource,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : LanguageRepository{
