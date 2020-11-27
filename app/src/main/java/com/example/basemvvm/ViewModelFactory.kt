@@ -6,6 +6,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.savedstate.SavedStateRegistryOwner
 import com.example.basemvvm.data.source.repository.LanguageRepository
+import com.example.basemvvm.main.viewmodel.MainViewModel
 import com.example.basemvvm.security.viewmodel.SecurityViewModel
 import com.example.basemvvm.setting.viewmodel.SettingViewModel
 
@@ -21,6 +22,7 @@ class ViewModelFactory constructor(
         handle: SavedStateHandle
     ) = with(modelClass){
         when {
+            isAssignableFrom(MainViewModel::class.java) -> MainViewModel()
             isAssignableFrom(SettingViewModel::class.java) -> SettingViewModel(languageRepository)
             isAssignableFrom(SecurityViewModel::class.java) -> SecurityViewModel()
           else ->
