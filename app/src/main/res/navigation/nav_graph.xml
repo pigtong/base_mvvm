@@ -15,27 +15,61 @@
         <action
             android:id="@+id/action_main_frag_dest_to_security_frag_dest2"
             app:destination="@id/security_frag_dest" />
+        <action
+            android:id="@+id/action_main_frag_dest_to_recyclerDataFragment"
+            app:destination="@id/recyclerdata_frag_dest" />
     </fragment>
     <fragment
         android:id="@+id/setting_frag_dest"
         android:name="com.example.basemvvm.setting.view.SettingFragment"
-        android:label="Setting" >
+        android:label="Setting Example" >
         <action
             android:id="@+id/action_setting_frag_dest_to_main_frag_dest"
             app:destination="@id/main_frag_dest" />
         <action
             android:id="@+id/action_setting_frag_dest_to_security_frag_dest2"
             app:destination="@id/security_frag_dest" />
+        <action
+            android:id="@+id/action_setting_frag_dest_to_recyclerDataFragment"
+            app:destination="@id/recyclerdata_frag_dest" />
     </fragment>
     <fragment
         android:id="@+id/security_frag_dest"
         android:name="com.example.basemvvm.security.view.SecurityFragment"
-        android:label="Security" >
+        android:label="Security Example" >
         <action
             android:id="@+id/action_security_frag_dest_to_main_frag_dest2"
             app:destination="@id/main_frag_dest" />
         <action
             android:id="@+id/action_security_frag_dest_to_setting_frag_dest2"
             app:destination="@id/setting_frag_dest" />
+        <action
+            android:id="@+id/action_security_frag_dest_to_recyclerDataFragment"
+            app:destination="@id/recyclerdata_frag_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/recyclerdata_frag_dest"
+        android:name="com.example.basemvvm.recyclerdata.view.RecyclerDataFragment"
+        android:label="Recycler Data Example" >
+        <action
+            android:id="@+id/action_recyclerdata_frag_dest_to_main_frag_dest"
+            app:destination="@id/main_frag_dest" />
+        <action
+            android:id="@+id/action_recyclerdata_frag_dest_to_security_frag_dest"
+            app:destination="@id/security_frag_dest" />
+        <action
+            android:id="@+id/action_recyclerdata_frag_dest_to_setting_frag_dest"
+            app:destination="@id/setting_frag_dest" />
+        <action
+            android:id="@+id/action_recyclerdata_frag_dest_to_listViewFragment"
+            app:destination="@id/listview_frag_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/listview_frag_dest"
+        android:name="com.example.basemvvm.recyclerdata.view.ListViewFragment"
+        android:label="Holiday Card" >
+        <action
+            android:id="@+id/action_listview_frag_dest_to_recyclerdata_frag_dest"
+            app:destination="@id/recyclerdata_frag_dest" />
     </fragment>
 </navigation>

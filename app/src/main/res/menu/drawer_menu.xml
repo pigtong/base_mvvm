@@ -5,11 +5,15 @@
         android:icon="@drawable/ic_home"
         android:title="Home"/>
     <item
+        android:id="@id/recyclerdata_frag_dest"
+        android:icon="@drawable/ic_list"
+        android:title="RecyclerData Example"/>
+    <item
         android:id="@id/security_frag_dest"
         android:icon="@drawable/ic_security"
-        android:title="Security"/>
+        android:title="Security Example"/>
     <item
         android:id="@id/setting_frag_dest"
         android:icon="@drawable/ic_settings"
-        android:title="Setting"/>
+        android:title="Setting Exanple"/>
 </menu>

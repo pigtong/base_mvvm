@@ -6,5 +6,6 @@ import com.example.basemvvm.ViewModelFactory
 
 fun Fragment.getViewModelFactory(): ViewModelFactory {
     val languageRepository = (requireContext().applicationContext as ExampleApplication).languageRepository
-    return ViewModelFactory(languageRepository, this)
+    val holidayCardRepository = (requireContext().applicationContext as ExampleApplication).holidayCarRepository
+    return ViewModelFactory(languageRepository, holidayCardRepository, this)
 }

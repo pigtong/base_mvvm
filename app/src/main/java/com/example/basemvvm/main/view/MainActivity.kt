@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             setSupportActionBar(toolbar)
 
             val navController: NavController = findNavController(R.id.navHostFragment)
-            appBarConfiguration = AppBarConfiguration.Builder(R.id.main_frag_dest, R.id.security_frag_dest, R.id.setting_frag_dest)
+            appBarConfiguration = AppBarConfiguration.Builder(R.id.main_frag_dest, R.id.security_frag_dest, R.id.setting_frag_dest, R.id.recyclerdata_frag_dest)
                     .setOpenableLayout(drawerLayout)
                     .build()
             setupActionBarWithNavController(navController, appBarConfiguration)
