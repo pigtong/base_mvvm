@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             supportActionBar?.setDisplayShowTitleEnabled(false)
             supportActionBar?.setDisplayShowHomeEnabled(true)
             navController.addOnDestinationChangedListener { _, destination, _ ->
-                textTitle.text = destination.label
+                fragmentTitle.text = destination.label
             }
         }
         setupNavigationDrawer()

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
             name="recyclerdataviewmodel"
@@ -9,7 +10,17 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_small"
+        android:background="@color/colorAccent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/holidayCardRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:items="@{recyclerdataviewmodel.holidayCardItems}"
+            tools:listitem="@layout/holidaycard_item"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

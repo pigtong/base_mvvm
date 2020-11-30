@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import com.example.basemvvm.adapter.HolidayCardAdapter
 import com.example.basemvvm.databinding.ListviewFragmentBinding
 import com.example.basemvvm.recyclerdata.viewmodel.RecyclerDataViewModel
 import com.example.basemvvm.utils.getViewModelFactory
@@ -13,6 +14,7 @@ import com.example.basemvvm.utils.getViewModelFactory
 class ListViewFragment : Fragment() {
 
     private lateinit var viewDataBinding : ListviewFragmentBinding
+    private lateinit var listAdapter : HolidayCardAdapter
     private val recyclerDataViewModel by activityViewModels<RecyclerDataViewModel> { getViewModelFactory() }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -26,9 +28,15 @@ class ListViewFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewDataBinding.lifecycleOwner = viewLifecycleOwner
         setupView()
+        setupAdapter()
     }
 
     private fun setupView(){
 
+    }
+
+    private fun setupAdapter(){
+        listAdapter = HolidayCardAdapter()
+        viewDataBinding.holidayCardRecyclerView.adapter = listAdapter
     }
 }
