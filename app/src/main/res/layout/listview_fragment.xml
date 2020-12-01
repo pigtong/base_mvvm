@@ -11,13 +11,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/margin_small"
         android:background="@color/colorAccent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/holidayCardRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_small"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:items="@{recyclerdataviewmodel.holidayCardItems}"
             tools:listitem="@layout/holidaycard_item"/>

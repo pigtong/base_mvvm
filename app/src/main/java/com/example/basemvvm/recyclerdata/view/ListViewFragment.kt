@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import com.example.basemvvm.R
 import com.example.basemvvm.adapter.HolidayCardAdapter
 import com.example.basemvvm.databinding.ListviewFragmentBinding
 import com.example.basemvvm.recyclerdata.viewmodel.RecyclerDataViewModel
 import com.example.basemvvm.utils.getViewModelFactory
+import java.text.SimpleDateFormat
 
 class ListViewFragment : Fragment() {
 
@@ -36,7 +38,7 @@ class ListViewFragment : Fragment() {
     }
 
     private fun setupAdapter(){
-        listAdapter = HolidayCardAdapter()
+        listAdapter = HolidayCardAdapter(SimpleDateFormat(getString(R.string.holidaycard_server_dateformat)))
         viewDataBinding.holidayCardRecyclerView.adapter = listAdapter
     }
 }

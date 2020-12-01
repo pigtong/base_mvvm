@@ -3,5 +3,6 @@
     <string name="menu_recyclerdata_example">RecyclerData Example</string>
     <string name="menu_security_example">Security Example</string>
     <string name="menu_setting_example">Setting Example</string>
-    <string name="holidaycard_date_format">%1$td %1$tb %1$tY</string>
+    <string name="unidentified">N/A</string>
+    <string name="holidaycard_server_dateformat">yyyy-MM-dd</string>
 </resources>
